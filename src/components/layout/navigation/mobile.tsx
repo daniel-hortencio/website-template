@@ -1,0 +1,37 @@
+import { Icon } from "@/components/ui/custom/icons";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { routes } from "@/routes";
+import Link from "next/link";
+
+interface Props {
+  className?: string;
+}
+
+export const NavigationMobile = ({ className }: Props) => (
+  <nav {...{ className }}>
+    <Drawer direction="right">
+      <DrawerTrigger>
+        <Icon.Menu className="size-8" />
+      </DrawerTrigger>
+      <DrawerTitle></DrawerTitle>
+
+      <DrawerContent className="p-5 space-y-5">
+        <DrawerClose>
+          <Icon.X className="size-8" />
+        </DrawerClose>
+
+        {routes.map((route) => (
+          <Link key={route.name} href={route.href}>
+            {route.name}
+          </Link>
+        ))}
+      </DrawerContent>
+    </Drawer>
+  </nav>
+);
