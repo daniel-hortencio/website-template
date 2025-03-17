@@ -11,21 +11,21 @@ const prices = [
     price: 59.9,
     details: [
       {
-        name: "Lorem Ipsum 1",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1",
         included: true,
       },
       {
-        name: "Lorem Ipsum 2",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2",
         included: true,
       },
       {
-        name: "Lorem Ipsum 3",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 3",
       },
       {
-        name: "Lorem Ipsum 4",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 4",
       },
       {
-        name: "Lorem Ipsum 5",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 5",
       },
     ],
   },
@@ -34,22 +34,22 @@ const prices = [
     price: 59.9,
     details: [
       {
-        name: "Lorem Ipsum 1",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1",
         included: true,
       },
       {
-        name: "Lorem Ipsum 2",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2",
         included: true,
       },
       {
-        name: "Lorem Ipsum 3",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 3",
         included: true,
       },
       {
-        name: "Lorem Ipsum 4",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 4",
       },
       {
-        name: "Lorem Ipsum 5",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 5",
       },
     ],
   },
@@ -58,23 +58,23 @@ const prices = [
     price: 59.9,
     details: [
       {
-        name: "Lorem Ipsum 1",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1",
         included: true,
       },
       {
-        name: "Lorem Ipsum 2",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2",
         included: true,
       },
       {
-        name: "Lorem Ipsum 3",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 3",
         included: true,
       },
       {
-        name: "Lorem Ipsum 4",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 4",
         included: true,
       },
       {
-        name: "Lorem Ipsum 5",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 5",
       },
     ],
   },
@@ -83,23 +83,23 @@ const prices = [
     price: 59.9,
     details: [
       {
-        name: "Lorem Ipsum 1",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1",
         included: true,
       },
       {
-        name: "Lorem Ipsum 2",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2",
         included: true,
       },
       {
-        name: "Lorem Ipsum 3",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 3",
         included: true,
       },
       {
-        name: "Lorem Ipsum 4",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 4",
         included: true,
       },
       {
-        name: "Lorem Ipsum 5",
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit 5",
         included: true,
       },
     ],
@@ -107,11 +107,8 @@ const prices = [
 ];
 
 export const HomePrices = () => (
-  <section>
+  <>
     <div className="container">
-      <h1>Prices</h1>
-      <p>Description</p>
-
       <div className="hidden xl:flex items-center gap-5">
         {prices.map((plan, index) => (
           <CardPrice key={plan.name} {...plan} recommended={index === 1} />
@@ -136,5 +133,5 @@ export const HomePrices = () => (
         ))}
       </CarouselContent>
     </Carousel>
-  </section>
+  </>
 );

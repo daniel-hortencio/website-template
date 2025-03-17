@@ -1,39 +1,66 @@
 "use client";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import { KeenSlider } from "@/components/ui/custom/keen-slider";
+import { useWindow } from "@/hooks/useWindow";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+
+const clients_logos = [
+  "apple.svg",
+  "samsung.svg",
+  "tesla.svg",
+  "john-deere.svg",
+  "amazon.svg",
+  "playstation.svg",
+  "adobe.svg",
+  "fiat.svg",
+];
 
 export const HomeClients = () => {
-  const plugin = useRef(Autoplay({ delay: 500, stopOnInteraction: true }));
+  const { width } = useWindow({});
 
   return (
-    <section className="bg-slate-100">
-      <Carousel
-        plugins={[plugin.current]}
-        className="w-full"
-        opts={{
-          loop: true,
-          dragFree: true,
-          dragThreshold: 0,
-          duration: 1500,
-        }}
-      >
-        <CarouselContent>
-          {Array.from({ length: 20 }).map((_, index) => (
-            <CarouselItem
-              key={index}
-              className="flex basis-auto flex-grow w-32"
+    <section className="py-2">
+      <div className="container hidden xl:flex items-center justify-evenly">
+        {clients_logos.map((logo, index) => (
+          <div key={logo} className={cn("flex  h-16 aspect-video p-2")}>
+            <div key={logo} className="relative w-full h-full ">
+              <Image
+                src={`/logos/${logo}`}
+                fill
+                alt={`Logo ${logo.split(".")[0].replaceAll("-", "")}`}
+              />
+            </div>{" "}
+          </div>
+        ))}
+      </div>
+
+      <div className="xl:hidden">
+        <KeenSlider.Root
+          key={width}
+          enableAnimation
+          slides={{
+            perView: width / 120,
+            spacing: 20,
+          }}
+        >
+          {[...clients_logos, ...clients_logos].map((logo, index) => (
+            <KeenSlider.Slide
+              key={`${logo}_${index}`}
+              className={cn("flex basis-auto flex-grow h-16 aspect-square p-2")}
             >
-              <div className="p-1">Test {index}</div>
-            </CarouselItem>
+              <div className="relative w-full h-full">
+                <Image
+                  src={`/logos/${logo}`}
+                  fill
+                  alt={`Logo ${logo.split(".")[0].replaceAll("-", "")}`}
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
+            </KeenSlider.Slide>
           ))}
-        </CarouselContent>
-      </Carousel>
+        </KeenSlider.Root>
+      </div>
     </section>
   );
 };

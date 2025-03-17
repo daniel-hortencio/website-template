@@ -45,7 +45,7 @@ export const CardPrice = ({ name, price, recommended, details }: Props) => {
                 recommended && "text-primary-foreground/80"
               )}
             >
-              {detail.name} {detail.name} {detail.name} {detail.name}
+              {detail.name}
             </p>
           </div>
         ))}

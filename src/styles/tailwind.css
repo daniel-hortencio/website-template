@@ -124,7 +124,7 @@
   .container {
     width: 100%;
     margin: auto;
-    padding: 0 1.25rem;
-    @apply max-w-[95rem] /* 1520px */;
+    padding: 0 2rem 0 1.25rem;
+    @apply max-w-[95rem];
   }
 }
