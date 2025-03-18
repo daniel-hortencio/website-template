@@ -59,7 +59,7 @@ export const MouseHighlight = ({
 
       <div
         className={cn(
-          "absolute bg-indigo-100 size-64 -translate-y-1/2 -translate-x-1/2 ronuded-full blur-3xl transition-opacity",
+          "absolute bg-indigo-100 size-64 -translate-y-1/2 -translate-x-1/2 rounded-full blur-3xl transition-opacity",
           isMouseInside ? "opacity-100" : "opacity-0",
           highlightClassName
         )}

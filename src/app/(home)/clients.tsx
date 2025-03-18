@@ -21,46 +21,30 @@ export const HomeClients = () => {
 
   return (
     <section className="py-2">
-      <div className="container hidden xl:flex items-center justify-evenly">
-        {clients_logos.map((logo, index) => (
-          <div key={logo} className={cn("flex  h-16 aspect-video p-2")}>
-            <div key={logo} className="relative w-full h-full ">
+      <KeenSlider.Root
+        key={width}
+        enableAnimation
+        slides={{
+          perView: width / 120,
+          spacing: 20,
+        }}
+      >
+        {[...clients_logos, ...clients_logos].map((logo, index) => (
+          <KeenSlider.Slide
+            key={`${logo}_${index}`}
+            className={cn("flex basis-auto flex-grow h-16 aspect-square p-2")}
+          >
+            <div className="relative w-full h-full">
               <Image
                 src={`/logos/${logo}`}
                 fill
                 alt={`Logo ${logo.split(".")[0].replaceAll("-", "")}`}
+                style={{ objectFit: "contain" }}
               />
-            </div>{" "}
-          </div>
+            </div>
+          </KeenSlider.Slide>
         ))}
-      </div>
-
-      <div className="xl:hidden">
-        <KeenSlider.Root
-          key={width}
-          enableAnimation
-          slides={{
-            perView: width / 120,
-            spacing: 20,
-          }}
-        >
-          {[...clients_logos, ...clients_logos].map((logo, index) => (
-            <KeenSlider.Slide
-              key={`${logo}_${index}`}
-              className={cn("flex basis-auto flex-grow h-16 aspect-square p-2")}
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={`/logos/${logo}`}
-                  fill
-                  alt={`Logo ${logo.split(".")[0].replaceAll("-", "")}`}
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-            </KeenSlider.Slide>
-          ))}
-        </KeenSlider.Root>
-      </div>
+      </KeenSlider.Root>
     </section>
   );
 };

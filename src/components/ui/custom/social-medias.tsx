@@ -15,7 +15,11 @@ const medias = [
 export const SocialMedia = () => (
   <div className="flex items-center gap-4">
     {medias.map(({ icon, href }) => (
-      <LinkExternal key={href} {...{ href }}>
+      <LinkExternal
+        key={href}
+        {...{ href }}
+        className="transition-all hover:text-indigo-600"
+      >
         {icon}
       </LinkExternal>
     ))}

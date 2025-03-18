@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/custom/icons";
 import { MouseHighlight } from "@/components/ui/custom/mouse-highlight";
@@ -12,15 +13,20 @@ interface Props {
     name: string;
     included?: boolean;
   }[];
+  className?: string;
 }
 
-export const CardPrice = ({ name, price, recommended, details }: Props) => {
+export const CardPrice = ({
+  name,
+  price,
+  recommended,
+  details,
+  className,
+}: Props) => {
   return (
     <MouseHighlight
-      className="rounded-xl"
-      highlightClassName={
-        recommended ? "bg-indigo-900" : "bg-yellow-50 size-40"
-      }
+      className={cn("rounded-xl", className)}
+      highlightClassName={recommended ? "bg-indigo-900" : "bg-indigo-100/60"}
     >
       <Card
         className={cn(
@@ -31,38 +37,59 @@ export const CardPrice = ({ name, price, recommended, details }: Props) => {
         )}
       >
         <CardHeader className="relative z-10">
-          <CardTitle className={cn(recommended && "text-primary-foreground")}>
+          <CardTitle
+            className={cn(recommended && "text-primary-foreground text-lg")}
+          >
             {name}
           </CardTitle>
-          <strong
-            className={cn(
-              "font-black text-2xl",
-              recommended && "text-primary-foreground"
-            )}
-          >
-            {maskCurrency(price)}
-          </strong>
+          <div>
+            <strong
+              className={cn(
+                "font-black text-3xl",
+                recommended && "text-primary-foreground"
+              )}
+            >
+              {maskCurrency(price)}
+            </strong>
+            <small
+              className={cn(
+                "font-medium",
+                recommended && "text-primary-foreground"
+              )}
+            >
+              /Month
+            </small>
+          </div>
         </CardHeader>
-        <CardContent className="space-y-4 relative z-10">
-          {details.map((detail) => (
-            <div key={detail.name} className="grid grid-cols-[2rem_1fr] gap-2">
-              <div className="w-full flex justify-center pt-1">
-                {detail.included ? (
-                  <Icon.Check className="size-5 min-w-5 text-emerald-600" />
-                ) : (
-                  <Icon.X className="size-6 text-muted-foreground" />
-                )}
-              </div>
-              <p
-                className={cn(
-                  "min-h-5 flex justify-start flex-col",
-                  recommended && "text-primary-foreground/80"
-                )}
+        <CardContent className="space-y-6 relative z-10">
+          <div className="space-y-3">
+            {details.map((detail) => (
+              <div
+                key={detail.name}
+                className="grid grid-cols-[2rem_1fr] gap-2"
               >
-                {detail.name}
-              </p>
-            </div>
-          ))}
+                <div className="w-full flex justify-center pt-1">
+                  {detail.included ? (
+                    <Icon.Check className="size-5 min-w-5 text-emerald-600" />
+                  ) : (
+                    <Icon.X className="size-6 text-muted-foreground" />
+                  )}
+                </div>
+                <p
+                  className={cn(
+                    "min-h-5 flex justify-start flex-col",
+                    recommended && "text-primary-foreground/80",
+                    !detail.included ? "opacity-40" : "font-medium"
+                  )}
+                >
+                  {detail.name}
+                </p>
+              </div>
+            ))}
+          </div>
+          <Button className="bg-gradient-to-r from-yellow-300 to-amber-300 hover:from-yellow-400 hover:to-amber-400 text-foreground">
+            Contratar
+          </Button>
         </CardContent>
       </Card>
     </MouseHighlight>

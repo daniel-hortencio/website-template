@@ -16,7 +16,7 @@ export const WebsiteLayoutHeader = () => {
       <div
         className={cn(
           "transition-all",
-          scrolled && "bg-background/80 backdrop-blur-sm shadow-md"
+          scrolled && "bg-background/90 backdrop-blur-sm shadow-md"
         )}
       >
         <div

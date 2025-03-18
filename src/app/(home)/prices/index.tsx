@@ -111,7 +111,12 @@ export const HomePrices = () => (
     <div className="container">
       <div className="hidden xl:flex items-center gap-5">
         {prices.map((plan, index) => (
-          <CardPrice key={plan.name} {...plan} recommended={index === 1} />
+          <CardPrice
+            key={plan.name}
+            {...plan}
+            recommended={index === 1}
+            className="rounded-xl hover:-translate-y-2 transition-all duration-400 hover:shadow-xl"
+          />
         ))}
       </div>
     </div>

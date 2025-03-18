@@ -23,7 +23,10 @@ export const NavigationMobile = ({ className }: Props) => (
       </DrawerTrigger>
       <DrawerTitle></DrawerTitle>
 
-      <DrawerContent className="p-5 space-y-5">
+      <DrawerContent
+        className="p-5 space-y-5 lg:hidden"
+        overlayClassName="backdrop-blur-xs lg:hidden"
+      >
         <DrawerClose className="cursor-pointer">
           <Icon.X className="size-8" />
         </DrawerClose>

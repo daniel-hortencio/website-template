@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { GradientBlur } from "@/components/ui/custom/gradient-blur";
 
 export const HomeHero = () => (
-  <section className="bg-slate-950 pt-64 pb-20 lg:pt-52 lg:pb-28 relative">
+  <section className="bg-slate-950 pt-64 pb-20 lg:pt-52 lg:pb-28 relative overflow-hidden">
+    <GradientBlur className="absolute bottom-0 left-0 size-[40rem] blur-[8rem] translate-y-1/2 -translate-x-1/2" />
     <div className="absolute top-0 lg:right-0 w-full h-2/3 lg:h-full lg:w-auto lg:aspect-video lg:max-w-2/3">
       <video
         autoPlay
@@ -29,10 +31,12 @@ export const HomeHero = () => (
         </div>
 
         <div className="flex items-center gap-5">
-          <Button className="border border-border">
+          <Button className="border border-indigo-400/60 bg-transparent hover:bg-indigo-900 hover:border-indigo-500">
             Quero ver detalhes do template
           </Button>
-          <Button>Quero comprar agora!</Button>
+          <Button className="bg-gradient-to-r from-yellow-300 to-amber-300 hover:from-yellow-400 hover:to-amber-400 text-foreground">
+            Quero comprar agora!
+          </Button>
         </div>
       </div>
     </div>

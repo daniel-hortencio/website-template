@@ -7,9 +7,13 @@ interface Props {
 }
 
 export const NavigationDesktop = ({ className }: Props) => (
-  <nav className={cn("flex items-center gap-5", className)}>
+  <nav className={cn("flex items-center gap-8", className)}>
     {routes.map((route) => (
-      <Link key={route.name} href={route.href} className="font-medium">
+      <Link
+        key={route.name}
+        href={route.href}
+        className="font-semibold hover:text-indigo-700 transition-all"
+      >
         {route.name}
       </Link>
     ))}
