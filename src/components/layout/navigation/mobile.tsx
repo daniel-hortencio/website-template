@@ -29,7 +29,7 @@ export const NavigationMobile = ({ className }: Props) => (
         </DrawerClose>
 
         {routes.map((route) => (
-          <Link key={route.name} href={route.href}>
+          <Link key={route.name} href={route.href} className="font-medium">
             {route.name}
           </Link>
         ))}

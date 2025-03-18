@@ -9,7 +9,7 @@ interface Props {
 export const NavigationDesktop = ({ className }: Props) => (
   <nav className={cn("flex items-center gap-5", className)}>
     {routes.map((route) => (
-      <Link key={route.name} href={route.href}>
+      <Link key={route.name} href={route.href} className="font-medium">
         {route.name}
       </Link>
     ))}
