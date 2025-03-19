@@ -31,10 +31,10 @@ export const HomeHero = () => (
         </div>
 
         <div className="flex items-center gap-5">
-          <Button className="border border-indigo-400/60 bg-transparent hover:bg-indigo-900 hover:border-indigo-500">
+          <Button className="border border-indigo-400/60 bg-transparent hover:bg-indigo-900 hover:border-indigo-500 shadow-sm hover:shadow-lg shadow-indigo-700">
             Quero ver detalhes do template
           </Button>
-          <Button className="bg-gradient-to-r from-yellow-300 to-amber-300 hover:from-yellow-400 hover:to-amber-400 text-foreground">
+          <Button className="bg-gradient-to-r from-yellow-300 to-amber-300 text-foreground hover:brightness-110 shadow-sm hover:shadow-lg shadow-amber-600">
             Quero comprar agora!
           </Button>
         </div>

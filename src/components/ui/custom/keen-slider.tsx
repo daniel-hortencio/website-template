@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 import "keen-slider/keen-slider.min.css";
 
-const animation = { duration: 5000, easing: (t: number) => t };
+const animation = { duration: 7000, easing: (t: number) => t };
 
 interface Props {
   children: ReactNode;

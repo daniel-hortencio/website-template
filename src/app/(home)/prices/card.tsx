@@ -87,7 +87,12 @@ export const CardPrice = ({
               </div>
             ))}
           </div>
-          <Button className="bg-gradient-to-r from-yellow-300 to-amber-300 hover:from-yellow-400 hover:to-amber-400 text-foreground">
+          <Button
+            className={cn(
+              "bg-gradient-to-r from-yellow-300 to-amber-300 text-foreground hover:brightness-110 hover:shadow-lg ",
+              recommended ? "shadow-amber-500" : "shadow-amber-300"
+            )}
+          >
             Contratar
           </Button>
         </CardContent>
