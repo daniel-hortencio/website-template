@@ -26,14 +26,14 @@ export const CardPrice = ({
   return (
     <MouseHighlight
       className={cn("rounded-xl", className)}
-      highlightClassName={recommended ? "bg-indigo-900" : "bg-indigo-100/60"}
+      highlightClassName={recommended ? "bg-indigo-900" : "bg-white"}
     >
       <Card
         className={cn(
           "w-full py-5",
           recommended
-            ? "bg-gradient-to-b from-indigo-950 to-slate-950"
-            : "bg-gradient-to-b from-white to-slate-100"
+            ? "bg-gradient-to-tr from-indigo-950 to-slate-950"
+            : "bg-gradient-to-tr from-indigo-50 to-indigo-100"
         )}
       >
         <CardHeader className="relative z-10">
@@ -89,8 +89,10 @@ export const CardPrice = ({
           </div>
           <Button
             className={cn(
-              "bg-gradient-to-r from-yellow-300 to-amber-300 text-foreground hover:brightness-110 hover:shadow-lg ",
-              recommended ? "shadow-amber-500" : "shadow-amber-300"
+              "bg-gradient-to-r from-yellow-300 to-amber-300 text-foreground hover:brightness-110 shadow-none  ",
+              recommended
+                ? "hover:shadow-lg shadow-amber-500"
+                : "hover:shadow-md shadow-slate-400"
             )}
           >
             Contratar
