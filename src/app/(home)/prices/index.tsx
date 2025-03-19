@@ -168,7 +168,7 @@ export const HomePrices = () => {
             <div
               key={index}
               className={cn(
-                "size-3 rounded-sm bg-slate-300 transition-all duration-300",
+                "size-3 rounded-sm bg-slate-400/80 transition-all duration-300",
                 current - 1 === index && "w-6 bg-indigo-800/80"
               )}
             />
