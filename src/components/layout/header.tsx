@@ -15,8 +15,8 @@ export const WebsiteLayoutHeader = () => {
     <header className="w-screen z-40 fixed top-0 left-0 ">
       <div
         className={cn(
-          "transition-all",
-          scrolled && "bg-background/90 backdrop-blur-sm shadow-md"
+          "transition-all border-b border-transparent",
+          scrolled && "bg-background/90 backdrop-blur-sm shadow-md border-white"
         )}
       >
         <div
