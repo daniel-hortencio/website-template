@@ -3,7 +3,7 @@ import { GradientBlur } from "@/components/ui/custom/gradient-blur";
 
 export const HomeHero = () => (
   <section className="bg-slate-950 pt-64 pb-20 lg:pt-52 lg:pb-28 relative overflow-hidden">
-    <GradientBlur className="absolute bottom-0 left-0 size-[40rem] blur-[8rem] translate-y-1/2 -translate-x-1/2" />
+    <GradientBlur className="absolute bottom-0 left-0 size-[32rem] lg:size-[40rem] blur-[8rem] translate-y-1/2 -translate-x-1/2 z-[2]" />
     <div className="absolute top-0 lg:right-0 w-full h-2/3 lg:h-full lg:w-auto lg:aspect-video lg:max-w-2/3">
       <video
         autoPlay
