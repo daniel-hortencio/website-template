@@ -30,12 +30,19 @@ export const WebsiteLayoutHeader = () => {
           <NavigationMobile className="lg:hidden" />
 
           <div className="hidden lg:flex items-center gap-6">
-            <Button>Call to Action</Button>
+            <Button
+              className={cn(
+                "bg-gradient-to-r from-yellow-300 to-amber-300 text-foreground hover:brightness-110",
+                !scrolled && "shadow-sm hover:shadow-lg shadow-amber-500"
+              )}
+            >
+              Call to Action
+            </Button>
             <SocialMedia
               className={
                 scrolled
                   ? "[&_svg]:hover:text-indigo-600"
-                  : "[&_svg]:hover:text-yellow-400"
+                  : "[&_svg]:hover:text-yellow-200"
               }
             />
           </div>

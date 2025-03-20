@@ -26,14 +26,14 @@ export const CardPrice = ({
   return (
     <MouseHighlight
       className={cn("rounded-xl", className)}
-      highlightClassName={recommended ? "bg-indigo-900" : "bg-white"}
+      highlightClassName={recommended ? "bg-indigo-900" : "bg-transparent"}
     >
       <Card
         className={cn(
           "w-full py-5",
           recommended
             ? "bg-gradient-to-tr from-indigo-900 to-slate-950"
-            : "bg-gradient-to-tr from-white to-slate-200"
+            : "bg-white"
         )}
       >
         {" "}
@@ -95,10 +95,8 @@ export const CardPrice = ({
           </div>
           <Button
             className={cn(
-              "bg-gradient-to-r text-foreground hover:brightness-110",
-              recommended
-                ? "from-yellow-300 to-amber-300 shadow-sm hover:shadow-lg shadow-amber-500"
-                : "from-yellow-200 to-yellow-300 shadow-2xs hover:shadow-lg shadow-amber-400"
+              "bg-gradient-to-r from-yellow-300 to-amber-300 text-foreground hover:brightness-110",
+              recommended && "shadow-sm hover:shadow-lg shadow-amber-500"
             )}
           >
             Contratar

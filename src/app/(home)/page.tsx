@@ -5,6 +5,7 @@ import { HomePrices } from "./prices";
 import { HomeTestimonials } from "./testimonials";
 import { HomeStatistics } from "./statistics";
 import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -15,7 +16,7 @@ export default function Home() {
       <Section
         title={<h1 className="text-3xl font-bold">Prices</h1>}
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        className="py-8"
+        className="py-16"
       >
         <HomePrices />
       </Section>
@@ -23,7 +24,7 @@ export default function Home() {
       <Section
         title={<h1 className="text-3xl font-bold">Statistics</h1>}
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        className="py-10 text-primary-foreground relative overflow-hidden bg-slate-800"
+        className="py-16 text-primary-foreground relative overflow-hidden bg-slate-800"
         alignCenter
       >
         <Image
@@ -38,7 +39,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="flex flex-col items-start xl:grid grid-cols-[24rem_2fr] w-full gap-12 py-8 container-left">
+      <Section className="py-16 flex flex-col items-start xl:grid grid-cols-[24rem_2fr] w-full gap-12 container-left">
         <SectionHeader
           title={<h1 className="text-3xl font-bold">Testimonials</h1>}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

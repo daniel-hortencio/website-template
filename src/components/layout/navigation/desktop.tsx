@@ -20,7 +20,7 @@ export const NavigationDesktop = ({ className }: Props) => {
           href={route.href}
           className={cn(
             "font-semibold  transition-all",
-            scrolled ? "hover:text-indigo-700" : "hover:text-yellow-400"
+            scrolled ? "hover:text-indigo-700" : "hover:text-yellow-200"
           )}
         >
           {route.name}
