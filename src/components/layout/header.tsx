@@ -31,7 +31,13 @@ export const WebsiteLayoutHeader = () => {
 
           <div className="hidden lg:flex items-center gap-6">
             <Button>Call to Action</Button>
-            <SocialMedia />
+            <SocialMedia
+              className={
+                scrolled
+                  ? "[&_svg]:hover:text-indigo-600"
+                  : "[&_svg]:hover:text-yellow-400"
+              }
+            />
           </div>
         </div>
       </div>

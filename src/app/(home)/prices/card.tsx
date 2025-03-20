@@ -38,7 +38,7 @@ export const CardPrice = ({
       >
         <CardHeader className="relative z-10">
           <CardTitle
-            className={cn(recommended && "text-primary-foreground text-lg")}
+            className={cn("text-lg", recommended && "text-primary-foreground ")}
           >
             {name}
           </CardTitle>

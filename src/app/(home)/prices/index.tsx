@@ -9,6 +9,7 @@ import {
 import { CardPrice } from "./card";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useWindow } from "@/hooks/useWindow";
 
 const prices = [
   {
@@ -112,6 +113,7 @@ const prices = [
 ];
 
 export const HomePrices = () => {
+  const { width } = useWindow();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -127,7 +129,7 @@ export const HomePrices = () => {
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
-  }, [api]);
+  }, [api, width]);
 
   return (
     <div>

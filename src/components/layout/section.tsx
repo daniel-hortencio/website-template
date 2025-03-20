@@ -2,20 +2,47 @@ import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
 interface Props {
-  title: ReactNode;
+  title?: ReactNode;
   description?: string;
   children: ReactNode;
   className?: string;
+  alignCenter?: boolean;
 }
 
-export const Section = ({ children, title, className, description }: Props) => (
-  <section className={cn("flex flex-col gap-10 xl:gap-12", className)}>
-    <header className="container space-y-2">
-      {title}
+export const SectionHeader = ({
+  title,
+  description,
+  alignCenter,
+  className,
+}: Omit<Props, "children">) => (
+  <header
+    className={cn(
+      `space-y-2 flex flex-col relative z-10`,
+      alignCenter && "items-center text-center",
+      className
+    )}
+  >
+    {title}
 
-      {description && <p className="max-w-3xl">{description}</p>}
-    </header>
+    {description && <p className="max-w-3xl">{description}</p>}
+  </header>
+);
 
-    <div>{children}</div>
+export const Section = ({
+  children,
+  title,
+  className,
+  description,
+  alignCenter,
+}: Props) => (
+  <section className={cn("flex flex-col gap-8 xl:gap-10", className)}>
+    {title && (
+      <SectionHeader
+        {...{ title, description, alignCenter }}
+        className="container"
+      />
+    )}
+
+    {children}
   </section>
 );

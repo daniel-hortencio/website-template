@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Icon } from "./icons";
 import { LinkExternal } from "./link-external";
 
@@ -12,14 +13,10 @@ const medias = [
   },
 ];
 
-export const SocialMedia = () => (
-  <div className="flex items-center gap-4">
+export const SocialMedia = ({ className = "" }) => (
+  <div className={cn("flex items-center gap-4", className)}>
     {medias.map(({ icon, href }) => (
-      <LinkExternal
-        key={href}
-        {...{ href }}
-        className="transition-all hover:text-indigo-600"
-      >
+      <LinkExternal key={href} {...{ href }} className="transition-all">
         {icon}
       </LinkExternal>
     ))}

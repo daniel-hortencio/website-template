@@ -128,7 +128,7 @@
     @apply border-border outline-ring/50 font-[100%];
   }
   body {
-    @apply bg-background text-foreground flex flex-col justify-between min-h-screen w-screen overflow-x-hidden;
+    @apply bg-slate-50 text-foreground flex flex-col justify-between min-h-screen w-screen overflow-x-hidden;
   }
 }
 
@@ -138,5 +138,9 @@
     margin: auto;
     padding: 0 2rem 0 1.25rem;
     @apply max-w-[95rem];
+  }
+
+  .container-left {
+    @apply pl-[calc((100vw-95rem)/2)];
   }
 }

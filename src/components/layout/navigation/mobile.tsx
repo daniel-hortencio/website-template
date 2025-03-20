@@ -18,7 +18,7 @@ interface Props {
 export const NavigationMobile = ({ className }: Props) => (
   <nav {...{ className }}>
     <Drawer direction="right">
-      <DrawerTrigger className="cursor-pointer">
+      <DrawerTrigger className="cursor-pointer hover:text-indigo-700">
         <Icon.Menu className="size-8" />
       </DrawerTrigger>
       <DrawerTitle></DrawerTitle>
@@ -32,14 +32,18 @@ export const NavigationMobile = ({ className }: Props) => (
         </DrawerClose>
 
         {routes.map((route) => (
-          <Link key={route.name} href={route.href} className="font-medium">
+          <Link
+            key={route.name}
+            href={route.href}
+            className="font-medium hover:text-indigo-700"
+          >
             {route.name}
           </Link>
         ))}
 
         <Button>Call to Action</Button>
 
-        <SocialMedia />
+        <SocialMedia className="[&_svg]:hover:text-indigo-600" />
       </DrawerContent>
     </Drawer>
   </nav>
