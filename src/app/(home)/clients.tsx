@@ -33,7 +33,6 @@ export const HomeClients = () => {
           perView: width / 120,
           spacing: 20,
         }}
-        className="test"
       >
         {[...clients_logos, ...clients_logos].map((logo, index) => (
           <KeenSlider.Slide
