@@ -1,9 +1,9 @@
 "use client";
 
 import { KeenSlider } from "@/components/ui/custom/keen-slider";
+import { useWindow } from "@/hooks/useWindow";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useWindow } from "react-valley";
 
 const clients_logos = [
   "apple.svg",
@@ -17,8 +17,13 @@ const clients_logos = [
 ];
 
 export const HomeClients = () => {
-  const { width } = useWindow({});
+  const { width } = useWindow();
+  /*   const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+ */
   return (
     <section className="py-2">
       <KeenSlider.Root
@@ -28,6 +33,7 @@ export const HomeClients = () => {
           perView: width / 120,
           spacing: 20,
         }}
+        className="test"
       >
         {[...clients_logos, ...clients_logos].map((logo, index) => (
           <KeenSlider.Slide

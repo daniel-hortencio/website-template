@@ -1,6 +1,6 @@
 "use client";
 
-import { useWindow } from "react-valley";
+import { useWindow } from "@/hooks/useWindow";
 import { cn } from "@/lib/utils";
 import { routes } from "@/routes";
 import Link from "next/link";
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const NavigationDesktop = ({ className }: Props) => {
-  const { scrolled } = useWindow({});
+  const { scrolled } = useWindow();
 
   return (
     <nav className={cn("flex items-center gap-8", className)}>

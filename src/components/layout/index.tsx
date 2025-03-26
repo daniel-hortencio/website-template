@@ -1,13 +1,14 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import { useWindow, WebsiteHeader, WebsiteHeaderContent } from "react-valley";
 import { WebsiteLayoutFooter } from "./footer";
 import { Logo } from "../ui/custom/logo";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Sidebar, SidebarCloseButton, SidebarContent } from "./sidebar";
 import { Icon } from "../ui/custom/icons";
+import { useWindow } from "@/hooks/useWindow";
+import { WebsiteHeader, WebsiteHeaderContent } from "./header";
 
 interface Props {
   children: ReactNode;
@@ -72,6 +73,7 @@ export const WebsiteLayout = ({ children }: Props) => {
       </Sidebar>
 
       <main className="flex-auto relative">{children}</main>
+
       <WebsiteLayoutFooter />
     </>
   );

@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { ReactNode, useEffect } from "react";
 import { Icon } from "../ui/custom/icons";
-import { ContainerClickOutside } from "react-valley";
+import { ContainerClickOutside } from "../ui/custom/container-click-outside";
 
 export type Props = {
   open: boolean;
@@ -23,7 +23,7 @@ export const SidebarCloseButton = ({
 }) => {
   return (
     <button
-      id="react-valley-sidebar-close-button"
+      id="sidebar-close-button"
       className={cn(
         "w-fit [&_svg]:text-primary [&_svg]:size-8 cursor-pointer",
         className
@@ -43,9 +43,7 @@ export const Sidebar = ({
   disableClickOutside,
 }: Props) => {
   useEffect(() => {
-    const closeButton = document.getElementById(
-      "react-valley-sidebar-close-button"
-    );
+    const closeButton = document.getElementById("sidebar-close-button");
 
     if (closeButton) {
       closeButton.addEventListener("click", onClose);

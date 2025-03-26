@@ -8,7 +8,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { useWindow } from "react-valley";
+import { useWindow } from "@/hooks/useWindow";
 import { cn } from "@/lib/utils";
 import { routes } from "@/routes";
 import Link from "next/link";
