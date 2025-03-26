@@ -6,7 +6,7 @@ import { WebsiteLayoutFooter } from "./footer";
 import { Logo } from "../ui/custom/logo";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-/* import { Sidebar, SidebarCloseButton, SidebarContent } from "./sidebar"; */
+import { Sidebar, SidebarCloseButton, SidebarContent } from "./sidebar";
 import { Icon } from "../ui/custom/icons";
 
 interface Props {
@@ -14,9 +14,9 @@ interface Props {
 }
 
 export const WebsiteLayout = ({ children }: Props) => {
-  /*   const [openSidebar, setOpenSidebar] = useState(false); */
+  const [openSidebar, setOpenSidebar] = useState(false);
 
-  /*   const { scrolled } = useWindow({ scrollThreshold: 80 }); */
+  const { scrolled } = useWindow({ scrollThreshold: 80 });
 
   return (
     <>
@@ -26,8 +26,7 @@ export const WebsiteLayout = ({ children }: Props) => {
         scrollThreshold={80}
       >
         <WebsiteHeaderContent>
-          <h1>AQUI</h1>
-          {/*  <div className={cn("text-white", scrolled && "text-primary")}>
+          <div className={cn("text-white", scrolled && "text-primary")}>
             <Logo />
           </div>
           <nav className="space-x-8 hidden xl:block">
@@ -49,9 +48,9 @@ export const WebsiteLayout = ({ children }: Props) => {
             >
               Contact
             </Link>
-          </nav> */}
+          </nav>
 
-          {/*    <button
+          <button
             onClick={() => setOpenSidebar(true)}
             className={cn(
               "transition-all hover:bg-white/10 rounded-full p-1 translate-x-2 text-white cursor-pointer",
@@ -59,18 +58,18 @@ export const WebsiteLayout = ({ children }: Props) => {
             )}
           >
             <Icon.Menu className="size-8" />
-          </button> */}
+          </button>
         </WebsiteHeaderContent>
       </WebsiteHeader>
 
-      {/*   <Sidebar open={openSidebar} onClose={() => setOpenSidebar(false)}>
+      <Sidebar open={openSidebar} onClose={() => setOpenSidebar(false)}>
         <SidebarContent>
           <SidebarCloseButton className="rounded-full p-1 hover:bg-primary/5 transition-all -translate-y-2 -translate-x-2">
             <Icon.X className="size-8 text-white" />
           </SidebarCloseButton>
           <h1>Testando</h1>
         </SidebarContent>
-      </Sidebar> */}
+      </Sidebar>
 
       <main className="flex-auto relative">{children}</main>
       <WebsiteLayoutFooter />
