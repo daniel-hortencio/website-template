@@ -51,8 +51,8 @@ importers:
         specifier: ^5.5.0
         version: 5.5.0(react@19.0.0)
       react-valley:
-        specifier: ^1.0.19
-        version: 1.0.19(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^1.0.21
+        version: 1.0.21(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tailwind-merge:
         specifier: ^3.0.2
         version: 3.0.2
@@ -2185,8 +2185,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-valley@1.0.19:
-    resolution: {integrity: sha512-tPrQiOeMp25M3M77mAC+hSP107XxiPRLapntfemsPiu12ZnOS064uo6SX4WoK8bD374LoTX9aRBbWS/Vsf1Q0Q==}
+  react-valley@1.0.21:
+    resolution: {integrity: sha512-vrZjEt83reiSSgMaSIhSD31Pd5NT4CY735SoYzEHSCLmTqDY3VwNHheEVeV2ZnKLGcQZsiYBGPXuAgXAS5JMtQ==}
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
@@ -4779,7 +4779,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.0.10
 
-  react-valley@1.0.19(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-valley@1.0.21(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@phosphor-icons/react': 2.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       clsx: 2.1.1
