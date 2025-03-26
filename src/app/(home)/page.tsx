@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <HomeHero />
 
       <HomeClients />
@@ -48,6 +48,6 @@ export default function Home() {
 
         <HomeTestimonials />
       </Section>
-    </>
+    </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useKeenSlider, KeenSliderOptions } from "keen-slider/react";
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import "keen-slider/keen-slider.min.css";
 
@@ -27,6 +27,7 @@ const Slider = ({
   enableAnimation,
   ...options
 }: SliderProps) => {
+  const [mounted, setMounted] = useState(false);
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     ...(enableAnimation && {
       created(s) {
@@ -40,11 +41,21 @@ const Slider = ({
       loop: true,
       renderMode: "performance",
     }),
+
     ...options,
   });
 
+  useEffect(() => setMounted(true), []);
+
   return (
-    <div ref={sliderRef} className={cn("keen-slider", className)}>
+    <div
+      ref={sliderRef}
+      className={cn(
+        "keen-slider transition-opacity",
+        mounted ? "opacity-100" : "opacity-0",
+        className
+      )}
+    >
       {children}
     </div>
   );

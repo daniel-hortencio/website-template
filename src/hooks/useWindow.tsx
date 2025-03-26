@@ -11,7 +11,9 @@ export const useWindow = (options?: Props) => {
   const scrollThreshold = options?.scrollThreshold ?? 80;
 
   const [loading, setLoading] = useState(true);
-  const [width, setWidth] = useState<number>(0);
+  const [width, setWidth] = useState<number>(
+    isClientSide ? window?.innerWidth : 0
+  );
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

@@ -18,12 +18,7 @@ const clients_logos = [
 
 export const HomeClients = () => {
   const { width } = useWindow();
-  /*   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
- */
   return (
     <section className="py-2">
       <KeenSlider.Root
