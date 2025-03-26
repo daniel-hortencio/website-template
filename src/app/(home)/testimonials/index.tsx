@@ -79,7 +79,7 @@ export const HomeTestimonials = () => {
         }}
       >
         <CarouselContent className="overflow-visible container ">
-          {testimonials.map((author, index) => (
+          {testimonials.map((author) => (
             <CarouselItem
               key={author.name}
               className="flex basis-full sm:basis-2/3 md:basis-3/5 lg:basis-3/7 xl:basis-1/2 2xl:basis-2/5 flex-grow w-full px-0 pr-5"
@@ -92,7 +92,7 @@ export const HomeTestimonials = () => {
       <div className="container w-full flex items-center gap-4">
         {Array.from({ length: count }).map((dot, index) => (
           <div
-            key={index}
+            key={`${dot}_${index}`}
             className={cn(
               "size-3 rounded-sm bg-slate-400/80 transition-all duration-300",
               current - 1 === index && "w-6 bg-indigo-800/80"
