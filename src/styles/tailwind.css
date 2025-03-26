@@ -128,7 +128,7 @@
     @apply border-border outline-ring/50 font-[100%];
   }
   body {
-    @apply bg-slate-50 text-foreground flex flex-col justify-between min-h-screen w-screen overflow-x-hidden;
+    @apply bg-slate-50 text-foreground flex flex-col justify-between min-h-screen w-screen overflow-x-hidden relative z-0;
   }
 }
 
@@ -142,5 +142,8 @@
 
   .container-left {
     @apply pl-[calc((100vw-95rem)/2)];
+  }
+  .container-right {
+    @apply pr-[calc((100vw-95rem)/2)];
   }
 }

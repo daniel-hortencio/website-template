@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { useWindow } from "@/hooks/useWindow";
+import { useWindow } from "react-valley";
 import { CardTestimonial } from "./card";
 
 const testimonials = [

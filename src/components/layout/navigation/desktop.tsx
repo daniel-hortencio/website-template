@@ -1,6 +1,6 @@
 "use client";
 
-import { useWindow } from "@/hooks/useWindow";
+import { useWindow } from "react-valley";
 import { cn } from "@/lib/utils";
 import { routes } from "@/routes";
 import Link from "next/link";
