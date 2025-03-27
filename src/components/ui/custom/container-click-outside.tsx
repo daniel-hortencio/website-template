@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo, useRef } from "react";
 
 export type ClickOutsideProps = {
   element?: keyof HTMLElementTagNameMap;
@@ -16,10 +16,14 @@ export const ContainerClickOutside = ({
   ref,
   ...rest
 }: ClickOutsideProps) => {
-  const container = ref ? ref : React.useRef<HTMLDivElement | null>(null);
+  const innerRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useMemo(() => ref ?? innerRef, [ref]);
 
   const handleClickOutside = (event: any) => {
-    if (!!container?.current && !container.current.contains(event.target)) {
+    if (
+      !!containerRef?.current &&
+      !containerRef.current.contains(event.target)
+    ) {
       onClickOutsite();
     }
   };
@@ -29,7 +33,7 @@ export const ContainerClickOutside = ({
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
     };
-  }, [container]);
+  }, [containerRef]);
 
-  return <div ref={container} {...rest} />;
+  return <div ref={containerRef} {...rest} />;
 };
