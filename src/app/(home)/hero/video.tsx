@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 export const HomeHeroVideo = () => {
-  const [mounted, setMouted] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const video = useRef<HTMLVideoElement | null>(null);
 
@@ -12,7 +12,7 @@ export const HomeHeroVideo = () => {
     if (!video) return;
 
     video?.current?.play();
-    setMouted(true);
+    setMounted(true);
   }, [video]);
 
   return (
