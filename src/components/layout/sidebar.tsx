@@ -40,7 +40,7 @@ export const Sidebar = ({
   onClose,
   className,
   children,
-  direction = "left",
+  direction = "right",
   disableClickOutside,
 }: Props) => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
@@ -67,7 +67,12 @@ export const Sidebar = ({
 
   return (
     <ContainerClickOutside
-      onClickOutsite={() => !disableClickOutside && onClose()}
+      onClickOutsite={() => {
+        if (!disableClickOutside) {
+          console.log("entrou aquiiiiiiiii");
+          onClose();
+        }
+      }}
       className={cn(
         "fixed bg-white top-0 transition-all bottom h-screen z-50 w-4/5 max-w-72 p-4 shadow-[0_0_0_200vw_rgba(0,0,0,0.4)] flex flex-col",
         direction === "left" ? "left-0" : "right-0",
