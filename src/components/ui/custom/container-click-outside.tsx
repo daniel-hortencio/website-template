@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useRef } from "react";
+import React, { useRef } from "react";
 
 export type ClickOutsideProps = {
   element?: keyof HTMLElementTagNameMap;
