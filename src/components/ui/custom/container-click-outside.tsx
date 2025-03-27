@@ -23,8 +23,8 @@ export const ContainerClickOutside = ({
     if (!containerRef) return;
 
     if (
-      !!containerRef?.current &&
-      !containerRef.current.contains(event.target)
+      !!(containerRef as any)?.current &&
+      !(containerRef as any)?.current?.contains(event.target)
     ) {
       onClickOutsite();
     }
