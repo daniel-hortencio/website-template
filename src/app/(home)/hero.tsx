@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { GradientBlur } from "@/components/ui/custom/gradient-blur";
 
 export const HomeHero = () => (
-  <section className="bg-slate-950 pt-64 pb-20 lg:pt-52 lg:pb-28 relative overflow-hidden">
+  <section className="bg-slate-950 pt-52 sm:pt-64 pb-12 sm:pb-20 lg:pt-52 lg:pb-28 relative overflow-hidden">
     <GradientBlur className="absolute bottom-0 left-0 size-[32rem] lg:size-[40rem] blur-[8rem] translate-y-1/2 -translate-x-1/2 z-[2]" />
     <div className="absolute top-0 lg:right-0 w-full h-96 sm:h-2/3 lg:h-full lg:w-auto lg:aspect-video lg:max-w-2/3">
       <video
@@ -19,7 +19,7 @@ export const HomeHero = () => (
     <div className="container relative z-10 text-primary-foreground flex justify-center lg:justify-start">
       <div className="flex flex-col items-center text-center lg:text-left lg:items-start space-y-8 max-w-xl">
         <div className="space-y-4 flex flex-col items-center lg:items-start">
-          <h1 className="text-3xl lg:text-4xl font-bold">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Economize uma semana de trabalho e aumente seu lucro desenvolvendo
             websites com esse template
           </h1>
