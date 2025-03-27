@@ -60,7 +60,7 @@ export const Sidebar = ({
     <ContainerClickOutside
       onClickOutsite={() => !disableClickOutside && onClose()}
       className={cn(
-        "fixed bg-white top-0 transition-all bottom h-screen z-50 w-4/5 max-w-80 shadow-[0_0_0_100vw_rgba(0,0,0,0.4)]",
+        "fixed bg-white top-0 transition-all bottom h-screen z-50 w-4/5 max-w-72 p-4 shadow-[0_0_0_100vw_rgba(0,0,0,0.4)] flex flex-col",
         direction === "left" ? "left-0" : "right-0",
         open
           ? "translate-x-0"
@@ -74,11 +74,3 @@ export const Sidebar = ({
     </ContainerClickOutside>
   );
 };
-
-export const SidebarContent = ({
-  children,
-  className,
-}: {
-  className?: string;
-  children: ReactNode;
-}) => <div className={cn("p-4 w-full", className)}>{children}</div>;
