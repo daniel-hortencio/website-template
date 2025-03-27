@@ -17,7 +17,7 @@ export const ContainerClickOutside = ({
   ...rest
 }: ClickOutsideProps) => {
   const innerRef = useRef<HTMLDivElement | null>(null);
-  const containerRef = useMemo(() => ref ?? innerRef, [ref]);
+  const containerRef = ref ?? innerRef;
 
   const handleClickOutside = (event: MouseEvent | TouchEvent) => {
     if (!containerRef) return;
