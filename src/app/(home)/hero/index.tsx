@@ -5,7 +5,7 @@ import { HomeHeroVideo } from "./video";
 export const HomeHero = () => {
   return (
     <section className="bg-slate-950 pt-52 sm:pt-64 pb-12 sm:pb-20 lg:pt-52 lg:pb-28 relative overflow-hidden">
-      <GradientBlur className="absolute bottom-0 left-0 size-[32rem] lg:size-[40rem] blur-[8rem] translate-y-1/2 -translate-x-1/2 z-[2]" />
+      <GradientBlur className="absolute bottom-0 left-1/2 size-[32rem] blur-[8rem] lg:blur-[12rem] translate-y-3/4 -translate-x-1/2 lg:top-0 lg:left-0 lg:-translate-y-1/2 lg:-translate-x-1/2 z-[2]" />
       <div className="absolute top-0 lg:right-0 w-full h-96 sm:h-2/3 lg:h-full lg:w-auto lg:aspect-video lg:max-w-2/3">
         <HomeHeroVideo />
         <div className="absolute bg-gradient-to-t lg:bg-gradient-to-r from-slate-950 to-slate-950/0 to-50% w-full h-full" />
