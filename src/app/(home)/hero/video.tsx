@@ -19,7 +19,7 @@ export const HomeHeroVideo = () => {
     <video
       ref={video}
       className={cn(
-        "absolute h-full w-full object-cover object-[60%] md:object-right transform scale-x-[-1] transition-opacity duration-1000",
+        "absolute h-full w-full object-cover object-[60%] md:object-right transform scale-x-[-1] transition-opacity duration-5000",
         mounted ? "opacity-100" : "opacity-0"
       )}
       muted
