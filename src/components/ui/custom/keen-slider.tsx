@@ -51,11 +51,12 @@ const Slider = ({
     <div
       ref={sliderRef}
       className={cn(
-        "keen-slider transition-opacity",
+        "keen-slider transition-opacity relative",
         mounted ? "opacity-100" : "opacity-0",
         className
       )}
     >
+      <div className="absolute bg-transparent w-full h-full z-10" />
       {children}
     </div>
   );

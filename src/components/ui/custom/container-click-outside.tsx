@@ -29,6 +29,8 @@ export const ContainerClickOutside = ({
   };
 
   React.useEffect(() => {
+    if (!containerRef) return;
+
     document.addEventListener("click", handleClickOutside, true);
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
