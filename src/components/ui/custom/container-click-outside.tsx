@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 export type ClickOutsideProps = {
   element?: keyof HTMLElementTagNameMap;
@@ -23,12 +23,15 @@ export const ContainerClickOutside = ({
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
+    document.addEventListener("touchstart", handleClickOutside, true);
+
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
+      document.removeEventListener("touchstart", handleClickOutside, true);
     };
-  }, [ref]);
+  }, []);
 
   return <div ref={ref} {...rest} />;
 };
