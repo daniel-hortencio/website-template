@@ -24,7 +24,7 @@ const process_steps = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "step-3.png",
     className:
-      "bg-gradient-to-tr from-slate-100 to-slate-300 [&_strong]:text-foreground [&_strong]:opacity-5",
+      "bg-gradient-to-tr from-slate-100 to-slate-300 [&_strong]:text-white [&_strong]:opacity-30",
   },
   {
     title: "Support and Improvements",

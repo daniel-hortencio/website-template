@@ -31,7 +31,7 @@ export const useWindow = (options?: Props) => {
       window?.removeEventListener("resize", handleResize);
       window?.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollThreshold]);
+  }, [scrollThreshold, window]);
 
   return {
     loading,

@@ -69,7 +69,6 @@ export const Sidebar = ({
     <ContainerClickOutside
       onClickOutsite={() => {
         if (!disableClickOutside) {
-          console.log("entrou aquiiiiiiiii");
           onClose();
         }
       }}
@@ -83,7 +82,7 @@ export const Sidebar = ({
             } shadow-transparent`,
         className
       )}
-      ref={sidebarRef} // Aplica a referência aqui
+      ref={sidebarRef} 
     >
       {children}
     </ContainerClickOutside>

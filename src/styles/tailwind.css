@@ -130,6 +130,10 @@
   body {
     @apply bg-slate-50 text-foreground flex flex-col justify-between min-h-screen w-screen overflow-x-hidden relative z-0;
   }
+  a,
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 @layer utilities {
