@@ -147,13 +147,7 @@ export const HomePrices = () => {
       </div>
 
       <div className="space-y-5 overflow-visible xl:hidden">
-        <Carousel
-          setApi={setApi}
-          className="w-full "
-          opts={{
-            dragFree: true,
-          }}
-        >
+        <Carousel setApi={setApi} className="w-full ">
           <CarouselContent className="overflow-visible container">
             {prices.map((plan, index) => (
               <CarouselItem

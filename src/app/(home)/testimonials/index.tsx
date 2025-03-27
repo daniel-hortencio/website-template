@@ -71,13 +71,7 @@ export const HomeTestimonials = () => {
 
   return (
     <div className="space-y-5 w-full overflow-visible">
-      <Carousel
-        setApi={setApi}
-        className="w-full"
-        opts={{
-          dragFree: true,
-        }}
-      >
+      <Carousel setApi={setApi} className="w-full">
         <CarouselContent className="overflow-visible container ">
           {testimonials.map((author) => (
             <CarouselItem
