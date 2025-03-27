@@ -20,6 +20,8 @@ export const ContainerClickOutside = ({
   const containerRef = useMemo(() => ref ?? innerRef, [ref]);
 
   const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+    if (!containerRef) return;
+
     if (
       !!containerRef?.current &&
       !containerRef.current.contains(event.target)
