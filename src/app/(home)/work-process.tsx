@@ -42,7 +42,7 @@ export const HomeWorkProcess = () => (
       <div
         key={title}
         className={cn(
-          "border rounded-xl relative overflow-hidden bg-slate-600 flex flex-col justify-between",
+          "rounded-xl relative overflow-hidden bg-slate-600 flex flex-col justify-between shadow-xs ",
           className
         )}
       >

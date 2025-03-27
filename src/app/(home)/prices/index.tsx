@@ -140,7 +140,7 @@ export const HomePrices = () => {
               key={plan.name}
               {...plan}
               recommended={index === 1}
-              className="rounded-xl hover:-translate-y-2 transition-all duration-400 hover:shadow-xl"
+              className="rounded-xl hover:-translate-y-2 transition-all duration-400 hover:shadow-xl shadow-slate-200"
             />
           ))}
         </div>
