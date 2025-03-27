@@ -5,6 +5,7 @@ import { HomePrices } from "./prices";
 import { HomeTestimonials } from "./testimonials";
 import { HomeStatistics } from "./statistics";
 import Image from "next/image";
+import { HomeWorkProcess } from "./work-process";
 
 export default function Home() {
   return (
@@ -12,6 +13,14 @@ export default function Home() {
       <HomeHero />
 
       <HomeClients />
+
+      <Section
+        title={<h1 className="text-3xl font-bold">Work Process</h1>}
+        // description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        className="py-16"
+      >
+        <HomeWorkProcess />
+      </Section>
 
       <Section
         title={<h1 className="text-3xl font-bold">Prices</h1>}
