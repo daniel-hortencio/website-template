@@ -24,7 +24,7 @@ export const WebsiteLayout = ({ children }: Props) => {
     <>
       <WebsiteHeader
         className="bg-transparent transition-colors"
-        scrolledClassName="bg-background/[.85] backdrop-blur-sm shadow-md shadow-slate-200"
+        scrolledClassName="bg-background/[.85] backdrop-blur-sm shadow-md shadow-slate-900/10"
         scrollThreshold={80}
       >
         <WebsiteHeaderContent>
