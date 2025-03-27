@@ -18,7 +18,7 @@ export const useSwipe = ({
   let isDragging = false;
   const maxTranslateX = element?.offsetWidth ?? 0;
 
-  function startDrag(event) {
+  function startDrag(event: any) {
     if (!element) return;
 
     startX = event.touches ? event.touches[0].clientX : event.clientX;
@@ -26,7 +26,7 @@ export const useSwipe = ({
     element.style.transition = "none";
   }
 
-  function moveDragRight(event) {
+  function moveDragRight(event: any) {
     if (!isDragging || !element) return;
 
     currentX = event.touches ? event.touches[0].clientX : event.clientX;
@@ -52,7 +52,7 @@ export const useSwipe = ({
     }
   }
 
-  function moveDragLeft(event) {
+  function moveDragLeft(event: any) {
     if (!isDragging || !element) return;
 
     currentX = event.touches ? event.touches[0].clientX : event.clientX;
